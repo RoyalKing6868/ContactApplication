@@ -1,19 +1,14 @@
 import Navigation from "./components/Navigation";
 import { FiSearch } from "react-icons/fi";
 import { FaCirclePlus } from "react-icons/fa6";
-import { HiOutlineUserCircle } from "react-icons/hi";
-import { IoMdTrash } from "react-icons/io";
-import { RiEditCircleLine } from "react-icons/ri";
 import { useEffect, useState } from "react";
 import { collection, getDocs, onSnapshot } from "firebase/firestore";
 import { db } from "./config/firbase";
 import Contactcard from "./components/Contactcard";
-import Modal from "./components/modal";
 import AddAndUpdate from "./components/AddAndUpdate";
 import useDisclouse from "./hooks/useDisclouse";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import * as Yup from "yup";
 import NotFound from "./components/NotFound";
 function App() {
   const [contacts, setContacts] = useState([]);
